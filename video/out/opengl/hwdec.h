@@ -23,6 +23,8 @@ struct gl_hwdec {
     // Normally this is GL_TEXTURE_2D, but the hwdec driver can set it to
     // GL_TEXTURE_RECTANGLE. This is needed because VDA is shit.
     GLenum gl_texture_target;
+    // Used by vaapi with egl. Can be "dma", "pixmap", "auto" or NULL
+    const char* map;
 };
 
 struct gl_hwdec_driver {

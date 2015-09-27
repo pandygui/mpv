@@ -708,6 +708,10 @@ _vaapi_x_egl=no
 (test "$_gl_x11_egl" = yes && test "$_vaapi" = yes) && _vaapi_x_egl=yes
 check_yes_no $_vaapi_x_egl VAAPI_X_EGL
 
+_vaapi_x_egl_tfp=no
+(test "$_gl_x11_egl_tfp" = yes && test "$_vaapi" = yes) && _vaapi_x_egl_tfp=yes
+check_yes_no $_vaapi_x_egl_tfp VAAPI_X_EGL
+
 check_pkg_config "SDL 2.0" $_sdl2 SDL2 'sdl2'
 
 check_statement_libs "OSS Audio" $_ossaudio OSS_AUDIO $_soundcard_header "int x = SNDCTL_DSP_SETFRAGMENT;"

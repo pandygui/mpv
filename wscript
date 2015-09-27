@@ -658,6 +658,11 @@ video_output_features = [
         'deps': [ 'vaapi', 'egl-x11' ],
         'func': check_true,
     }, {
+        'name': '--vaapi-x-egl-tfp',
+        'desc': 'VAAPI EGL on X11 Pixmap',
+        'deps': [ 'vaapi', 'egl-x11' ],
+        'func': check_true,
+    }, {
         'name': '--caca',
         'desc': 'CACA',
         'func': check_pkg_config('caca', '>= 0.99.beta18'),
